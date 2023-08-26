@@ -70,7 +70,7 @@ def tested_parameters(model):
                                 'model__eval_metric': ['logloss']
                            },
                 "LightGBM": {
-                                'model__boosting_type': ['gbdt', 'dart', 'rf']
+                                'model__boosting_type': ['gbdt', 'dart', 'rf'],
                                 'model__objective': ['binary'],
                                 'model__njobs': [-1]
                            },
