@@ -186,6 +186,10 @@ if __name__ == '__main__':
 
                     grid.fit(x_train, y_train, sample_weight=df['class_weight'])
 
+                else:
+
+                    grid.fit(x_train, y_train)
+
                 grid_results = pd.DataFrame(grid.cv_results_)
 
                 best_parameters = retrieve_best_params(grid_results)
