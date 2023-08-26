@@ -38,7 +38,7 @@ def tested_models():
     return {
                 'LightGBM': LGBMClassifier, # class_weight='balanced'
                 'RF': RandomForestClassifier, # class_weight='balanced'
-                'LogisticRegression': LogisticRegression # class_weight='balanced'
+                'LogisticRegression': LogisticRegression, # class_weight='balanced'
                 'GB': GradientBoostingClassifier,
                 'XGBoost': XGBClassifier
            }
