@@ -26,6 +26,10 @@ from sklearn.linear_model import LogisticRegression
 
 from lightgbm import LGBMClassifier
 
+from sklearn.pipeline import Pipeline
+
+from sklearn.model_selection import GridSearchCV
+
 import tqdm
 
 from sklearn.utils.class_weight import compute_class_weight
