@@ -177,7 +177,7 @@ if __name__ == '__main__':
 
                 grid = GridSearchCV(estimator=pipe,
                                     param_grid=[model_parameters],
-                                    cv=KFold(n_folds=5),
+                                    cv=KFold(n_splits=5),
                                     scoring=('f1_micro', 'f1_macro'),
                                     return_train_score=True,
                                     n_jobs=-1)
