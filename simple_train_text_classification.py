@@ -173,7 +173,7 @@ if __name__ == '__main__':
 
                     model_parameters['model__class_weight'] = ['balanced']
 
-                pipe = Pipeline(steps=[("model", model)])
+                pipe = Pipeline(steps=[("model", model())])
 
                 grid = GridSearchCV(estimator=pipe,
                                     param_grid=[model_parameters],
