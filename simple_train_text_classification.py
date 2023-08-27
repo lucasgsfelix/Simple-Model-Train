@@ -180,7 +180,8 @@ if __name__ == '__main__':
                                     cv=KFold(n_splits=5),
                                     scoring=('f1_micro', 'f1_macro'),
                                     return_train_score=True,
-                                    n_jobs=-1)
+                                    n_jobs=-1,
+                                    refit=False)
 
                 if balanced is True and model_name in ['GB', 'XGBoost']:
 
