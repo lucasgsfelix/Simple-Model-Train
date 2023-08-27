@@ -199,7 +199,9 @@ if __name__ == '__main__':
 
                 grid_results['Balanced'] = balanced
 
-                prediction = model(**best_parameters).predict(x_test)
+                trained_model = model(**best_parameters).fit(x_train, y_train)
+
+                prediction = trained_model.predict(x_test)
 
                 results = {
                         'Model': model,
