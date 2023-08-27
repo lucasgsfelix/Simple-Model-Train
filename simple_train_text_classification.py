@@ -197,7 +197,7 @@ if __name__ == '__main__':
 
                 best_parameters = retrieve_best_params(grid_results)
 
-                grid_results['Model'] = model
+                grid_results['Model'] = model_name
 
                 grid_results['Balanced'] = balanced
 
@@ -214,7 +214,7 @@ if __name__ == '__main__':
                 prediction = trained_model.predict(x_test)
 
                 results = {
-                        'Model': model,
+                        'Model': model_name,
                         'Balanced': balanced,
                         'f1-micro': f1_score(y_test, prediction, average='micro'),
                         'f1-macro': f1_score(y_test, prediction, average='macro'),
