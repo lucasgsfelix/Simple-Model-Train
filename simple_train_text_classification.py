@@ -201,6 +201,14 @@ if __name__ == '__main__':
 
                 grid_results['Balanced'] = balanced
 
+                if balanced is True and model_name in ['GB', 'XGBoost']:
+
+                    trained_model = model(**best_parameters).fit(x_train, y_train, sample_weight=df['class_weight'])
+
+                else:
+
+                    trained_model = model(**best_parameters).fit(x_train, y_train)
+
                 trained_model = model(**best_parameters).fit(x_train, y_train)
 
                 prediction = trained_model.predict(x_test)
