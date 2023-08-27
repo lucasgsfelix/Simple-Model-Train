@@ -187,7 +187,14 @@ if __name__ == '__main__':
 
                 if balanced is True and model_name in ['GB', 'XGBoost']:
 
-                    grid.fit(x_train, y_train, model__sample_weight=df['class_weight'])
+
+                    if train_dataset == 'Yelp':
+
+                        grid.fit(x_train, y_train, model__sample_weight=df['class_weight'][: size_yelp])
+
+                    else:
+
+                        grid.fit(x_train, y_train, model__sample_weight=df['class_weight'][-size_tripadvisor:])
 
                 else:
 
@@ -203,7 +210,13 @@ if __name__ == '__main__':
 
                 if balanced is True and model_name in ['GB', 'XGBoost']:
 
-                    trained_model = model(**best_parameters).fit(x_train, y_train, sample_weight=df['class_weight'])
+                    if train_dataset == 'Yelp':
+
+                        trained_model = model(**best_parameters).fit(x_train, y_train, sample_weight=df['class_weight'][: size_yelp])
+
+                    else:
+
+                        trained_model = model(**best_parameters).fit(x_train, y_train, sample_weight=df['class_weight'][-size_tripadvisor:])
 
                 else:
 
