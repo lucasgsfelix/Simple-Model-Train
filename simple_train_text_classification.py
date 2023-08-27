@@ -98,7 +98,7 @@ def tested_parameters(model):
                                             'model__penalty': [None, 'l2'],
                                             'model__C': [0.00001, 0.001, 0.1, 0.5, 1, 2, 10],
                                             'model__tol': [1e-6, 1e-4, 1e-2, 1],
-                                            'model_fit_intercept': [True, False],
+                                            'model__fit_intercept': [True, False],
                                             'model__solver': ['sag', 'saga'],
                                             'model__max_iter': [10, 50, 100, 150, 1000],
                                             'model__n_jobs': [-1]
