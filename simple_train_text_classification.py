@@ -50,7 +50,7 @@ def tested_models():
 
 def retrieve_best_params(grid_results):
 
-    params = grid_results[grid_results['mean_test_score'] == grid_results['mean_test_score'].max()]['params'].values[0]
+    params = grid_results[grid_results['mean_test_f1_macro'] == grid_results['mean_test_f1_macro'].max()]['params'].values[0]
 
     best_params = {}
 
