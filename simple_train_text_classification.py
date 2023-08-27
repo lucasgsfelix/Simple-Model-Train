@@ -36,6 +36,8 @@ from sklearn.utils.class_weight import compute_class_weight
 
 from sklearn.model_selection import KFold
 
+from sklearn.metrics import f1_score, accuracy_score
+
 
 def tested_models():
 
