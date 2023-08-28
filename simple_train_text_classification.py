@@ -241,6 +241,6 @@ if __name__ == '__main__':
 
         df_parameters = pd.concat(parameters)
 
-        df_complete.to_csv(dataset + ".csv", sep=';', index=False)
+        df_complete.to_csv(train_dataset + ".csv", sep=';', index=False)
 
-        df_parameters.to_csv(dataset + "_parameters.csv", sep=';', index=False)
+        df_parameters.to_csv(train_dataset + "_parameters.csv", sep=';', index=False)
