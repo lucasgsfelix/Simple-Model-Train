@@ -42,11 +42,11 @@ from sklearn.metrics import f1_score, accuracy_score
 def tested_models():
 
     return {
-                'LightGBM': LGBMClassifier, # class_weight='balanced'
-                'RF': RandomForestClassifier, # class_weight='balanced'
+                #'LightGBM': LGBMClassifier, # class_weight='balanced'
+                #'RF': RandomForestClassifier, # class_weight='balanced'
                 'LogisticRegression': LogisticRegression, # class_weight='balanced'
-                'GB': GradientBoostingClassifier,
-                'XGBoost': XGBClassifier
+                #'GB': GradientBoostingClassifier,
+                #'XGBoost': XGBClassifier
            }
 
 
